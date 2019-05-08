@@ -31,9 +31,9 @@
         public void ConfigureServices(IServiceCollection services)
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<BooksContext>(options => options.UseNpgsql(connection));
-            // services.AddDbContext<BooksContext>(options =>
-            //     options.UseSqlServer(connection));
+            // services.AddDbContext<BooksContext>(options => options.UseNpgsql(connection));
+            services.AddDbContext<BooksContext>(options =>
+                options.UseSqlServer(connection));
             services.AddCors();
             services.AddMvc()
                 .AddControllersAsServices();
