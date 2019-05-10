@@ -84,8 +84,6 @@
                     name: "demo",
                     template: "{controller=Demo}/{action=requestDummy}/{id?}");
             });
-
-            SampleData.Initialize(app.ApplicationServices);
         }
     }
 }

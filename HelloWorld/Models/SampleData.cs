@@ -6,10 +6,10 @@ namespace HelloWorld.Models
 
     public static class SampleData
     {
-        public static void Initialize(IServiceProvider serviceProvider)
+        public static void Initialize(BooksContext BooksContext)
         {
-            var context = serviceProvider.GetService<BooksContext>();
-            if (context.Books.Count() == 0)
+            var context = BooksContext;
+            if (!context.Books.Any())
             {
                 context.Books.AddRange(
                                     new Book

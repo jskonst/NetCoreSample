@@ -1,9 +1,8 @@
+using System.Linq;
+using HelloWorld.Models;
+using Microsoft.AspNetCore.Mvc;
 namespace HelloWorld.Controllers
 {
-    using System.Linq;
-    using HelloWorld.Models;
-    using Microsoft.AspNetCore.Mvc;
-
     public class BooksController : Controller
     {
         private BooksContext db;
